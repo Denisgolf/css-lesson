@@ -1,6 +1,30 @@
 .rect {
-    background: red;
-    width: 100px;
+}
+
+.rect img {
+    animation: pulse 4s linear infinite alternate;
     height: 200px;
-    border-radius: 100%;
+    filter: invert(100%) blur(5px)
+}
+
+@keyframes pulse {
+    from {
+        transform: translate(20px, 50px) scale(1) rotate(120deg);
+    }
+    to {
+        transform: translate(80px, 120px) scale(1.3) rotate(720deg);
+    }
+}
+@keyframes fade-in {
+    from {
+        filter: opacity(0)
+    }
+    to {
+        filter: opacity(100%)
+    }
+    
+}
+
+body {
+    animation: fade-in 15s;
 }
